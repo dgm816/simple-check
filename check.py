@@ -274,7 +274,7 @@ if __name__ == '__main__':
             if fileMissing == 0:
                 print("File percent available: 100%")
             else:    
-                print("File percent available: " + str((fileFound / fileMissing) * 100) + "%")
+                print("File percent available: " + str(round((fileMissing / fileFound) * 100, 2)) + "%")
             print("\r\n")
         
         # output total nzb stats
@@ -282,7 +282,7 @@ if __name__ == '__main__':
         if totalMissing == 0:
             print("Total percent available: 100%")
         else:
-            print("Total percent available: " + str((totalFound / totalMissing) * 100) + "%")
+            print("Total percent available: " + str(round((totalMissing / totalFound) * 100, 2)) + "%")
         print("\r\n")
     
     # close the connection
